@@ -47,7 +47,7 @@ function Login() {
   });
 
   return (
-    <div className="h-screen flex bg-gray-bg1">
+    <div data-testid="Login" className="h-screen flex bg-gray-bg1">
       <div className="w-full max-w-md m-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-16">
         <h1 className="text-2xl font-medium text-primary mt-4 mb-12 text-center">
           Log in to your account 🔐
@@ -63,6 +63,7 @@ function Login() {
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              data-testid={'email-input'}
             />
             {formik.errors.email ? <div>{formik.errors.email} </div> : null}
             <input
@@ -74,6 +75,7 @@ function Login() {
               value={formik.values.password}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
+              data-testid={'password-input'}
             />
             {formik.errors.password ? (
               <div>{formik.errors.password} </div>
