@@ -8,7 +8,7 @@ import {Provider} from "react-redux";
 const renderLogin = () => {
     render(
         <Provider store={store}>
-            <Login />
+            <Login/>
         </Provider>
     )
 }
