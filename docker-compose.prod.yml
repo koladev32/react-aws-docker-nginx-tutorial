@@ -32,3 +32,6 @@ services:
       sh -c "yarn build"
     env_file:
       - .env
+
+volumes:
+  nginx_secrets:
