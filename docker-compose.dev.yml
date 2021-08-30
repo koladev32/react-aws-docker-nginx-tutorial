@@ -22,5 +22,7 @@ services:
       - ./src:/app/src
     ports:
       - "3000:3000"
+    command: >
+      sh -c "yarn start"
     env_file:
       - .env
