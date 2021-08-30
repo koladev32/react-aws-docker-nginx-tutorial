@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: React Testing and Deploying
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Installing dependencies
+        run: yarn install
+      
+      - name: Running Test
+        run: yarn test
