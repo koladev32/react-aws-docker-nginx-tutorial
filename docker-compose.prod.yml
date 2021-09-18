@@ -11,7 +11,6 @@ services:
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - ./nginx/user_conf.d:/etc/nginx/user_conf.d
-      - ./app/build:/usr/share/nginx/html
     ports:
       - "80:80"
       - "443:443"
@@ -27,9 +26,9 @@ services:
     volumes:
       - ./src:/app/src
     ports:
-      - "3000:3000"
+      - "5000:5000"
     command: >
-      sh -c "yarn build"
+      sh -c "yarn build && serve -s build"
     env_file:
       - .env
 
